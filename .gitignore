@@ -1,2 +1,7 @@
+# Node + Next
 node_modules
 .next
+
+# Serwist
+public/sw*
+public/swe-worker*
