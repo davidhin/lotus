@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Dropdown from "@/components/ui/dropdown";
+import { Flex } from "@radix-ui/themes";
 
 const APP_NAME = "Lotus";
 const APP_DEFAULT_TITLE = "My Awesome PWA App";
@@ -63,7 +65,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Flex className="h-screen">
+          <Dropdown />
+          {children}
+        </Flex>
       </body>
     </html>
   );
